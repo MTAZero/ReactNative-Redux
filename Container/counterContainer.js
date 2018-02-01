@@ -1,6 +1,6 @@
 import Counter from '../Components/counter.js';
 import { connect } from 'react-redux';
-import { incCnt, decCnt} from '../Action';
+import { incCnt, decCnt, resetCnt} from '../Action';
 
 const mapStateToProps = (state) => {
     console.log(state);
@@ -16,6 +16,9 @@ const mapDispatchToProps = (dispatch) => {
         },
         decClick: (step) => {
             dispatch(decCnt(step));
+        },
+        resetClick: () => {
+            dispatch(resetCnt())
         }
     }
 };

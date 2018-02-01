@@ -1,7 +1,7 @@
-import {Inc, Dec} from '../Action/ActionType.js';
+import {Inc, Dec, Reset} from '../Action/ActionType.js';
 
 
-const counterReducer = (cnt = 995, action) => {
+const counterReducer = (cnt = 1000, action) => {
     switch (action.type) {
         case Inc:
             return cnt+action.step;
@@ -9,6 +9,10 @@ const counterReducer = (cnt = 995, action) => {
 
         case Dec:
             return cnt-action.step;
+            break;
+        
+        case Reset:
+            return 1000;
             break;
     
         default:

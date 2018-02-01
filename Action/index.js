@@ -1,4 +1,4 @@
-import {Inc, Dec} from './ActionType.js';
+import {Inc, Dec, Reset} from './ActionType.js';
 
 let id = 0;
 
@@ -14,5 +14,11 @@ export const decCnt = (step) => {
         type: Dec,
         step: step
     };
+}
+
+export const resetCnt = () => {
+    return {
+        type: Reset
+    }
 }
 
